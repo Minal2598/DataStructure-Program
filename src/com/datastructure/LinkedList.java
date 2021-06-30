@@ -29,18 +29,7 @@ public class LinkedList {
 		}
 		return newNode;
 	}
-
-	// print the output
-	public void print() {
-		Node temp = head;
-		while(temp != null) {
-			System.out.print(temp.data +  "-> ");
-			temp = temp.next;
-		}
 	
-	}
-	
-		
 	public void push(int data) {
 		Node newNode = new Node(data);
 		newNode .next = head;
@@ -64,6 +53,31 @@ public class LinkedList {
 			print();
 		
 	}
+	
+	//Delete first element
+	public int pop() {
+		int popData = 0;
+		if (head == null) {
+			System.out.println("Stack over flow ");
+		}
+		popData = head.data;
+		head = head.next;
+		
+		return popData;
+	}
+	
+
+	// print the output
+	public void print() {
+		Node temp = head;
+		while(temp != null) {
+			System.out.print(temp.data +  "-> ");
+			temp = temp.next;
+		}
+}
+	
+		
+	
 }
 	
 
