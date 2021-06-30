@@ -34,6 +34,16 @@ public class LinkedList {
 			
 		}
 	
+	public void push(int data) {
+		
+		Node newNode = new Node(data);
+		newNode.next = head;
+		head = newNode;
+		
+		
+	}
+
+	
 	
 
 	public void print() {

@@ -9,9 +9,9 @@ public class Main {
 		
 		LinkedList linkedList = new LinkedList();
 		
-		 linkedList.insert(56);
-		 linkedList.insert(30);
-		 linkedList.insert(70);
+		 linkedList.push(56);
+		 linkedList.push(30);
+		 linkedList.push(70);
 		
 		linkedList.print();
 		
