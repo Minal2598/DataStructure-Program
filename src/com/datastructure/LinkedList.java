@@ -1,7 +1,7 @@
 package com.datastructure;
 
 public class LinkedList {
-Node head;
+	Node head;
 	
 	
 	class Node{
@@ -15,7 +15,25 @@ Node head;
 	}	
 	
 	
-
+	public void insert(int data) {
+		Node newNode = new Node(data);
+		
+			if (head == null)
+			{
+			   head = newNode;
+			}
+			else {
+				Node temp = head ;
+				while(temp.next != null) {
+					
+					temp = temp.next ;
+					
+				}
+				temp.next = newNode ;
+			}
+			
+		}
+	
 	
 
 	public void print() {
@@ -31,28 +49,6 @@ Node head;
 		}
 
 
-
-
-
-	public void insert(int data) {
-    Node newNode = new Node(data);
-		
-		if (head == null)
-		{
-		   head = newNode;
-		}
-		else {
-			Node temp = head ;
-			while(temp.next != null) {
-				
-				temp = temp.next ;
-				
-			}
-			temp.next = newNode ;
-		}
-		
-		
-	}
 
 }
 	
