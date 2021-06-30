@@ -49,7 +49,7 @@ public class LinkedList {
 		
 	}
        
-	// Additional data put in betn previous data 
+	// Additional data put in betn previous data
 	
 	public void insertAfter(Node prevNode, int value) {
 		if (prevNode == null) {
