@@ -75,9 +75,24 @@ public class LinkedList {
 			temp = temp.next;
 		}
 }
+	public int search(int value) {
+		if (head == null) {
+		System.out.println("List is Empty");
+		return -1;
+		}
+		int index = 1;
+		Node tempNode = head;
+		while (tempNode != null) {
+		if (tempNode.data == value) {
+		break;
+		}
+		index++;
+		tempNode = tempNode.next;
+		}
+		return index;
+		}
 	
 		
 	
 }
 	
-
