@@ -12,6 +12,7 @@ public class Main {
 		linkedList.insert(70);
 
 		linkedList.insertAtPos(3, 40);
+		linkedList.delete(3);
 
 		linkedList.print();
 

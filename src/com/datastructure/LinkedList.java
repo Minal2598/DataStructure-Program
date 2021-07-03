@@ -111,6 +111,7 @@ public class LinkedList {
 		return index;
 	}
 
+	// Add Element in particular position
 	public void insertAtPos(int position, int data) {
 
 		Node node = new Node(data);
@@ -132,6 +133,24 @@ public class LinkedList {
 			node.next = temp;
 		}
 
+	}
+
+	// Delete element in particular position
+	public void delete(int position) {
+
+		if (position == 1) {
+			head = head.next;
+		} else {
+			Node previous = head;
+			int count = 1;
+			while (count < position - 1) {
+				previous = previous.next;
+				count++;
+			}
+
+			Node temp = previous.next;
+			previous.next = temp.next;
+		}
 	}
 
 }
