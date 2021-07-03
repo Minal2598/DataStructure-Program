@@ -110,7 +110,7 @@ public class LinkedList {
 		}
 		return index;
 	}
-
+		//Add element in perticular position
 	public void insertAtPos(int position, int data) {
 
 		Node node = new Node(data);
