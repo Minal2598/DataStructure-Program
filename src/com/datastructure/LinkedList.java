@@ -112,6 +112,7 @@ public class LinkedList {
 	}
 
 	// Add Element in particular position
+
 	public void insertAtPos(int position, int data) {
 
 		Node node = new Node(data);
@@ -135,7 +136,7 @@ public class LinkedList {
 
 	}
 
-	// Delete element in particular position
+	// Delete element in particular positio
 	public void delete(int position) {
 
 		if (position == 1) {
@@ -153,4 +154,5 @@ public class LinkedList {
 		}
 	}
 
+}
 }
