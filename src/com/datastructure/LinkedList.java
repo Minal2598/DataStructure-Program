@@ -7,6 +7,7 @@ public class LinkedList {
 	class Node {
 		int data;
 		Node next;
+		public Node nextNode;
 
 		public Node(int data) {
 			this.data = data;
@@ -90,6 +91,47 @@ public class LinkedList {
 			System.out.print(temp.data + "-> ");
 			temp = temp.next;
 		}
+	}
+
+	// Search Data using Index
+	public int search(int value) {
+		if (head == null) {
+			System.out.println("List is Empty");
+			return -1;
+		}
+		int index = 1;
+		Node tempNode = head;
+		while (tempNode != null) {
+			if (tempNode.data == value) {
+				break;
+			}
+			index++;
+			tempNode = tempNode.next;
+		}
+		return index;
+	}
+
+	public void insertAtPos(int position, int data) {
+
+		Node node = new Node(data);
+
+		if (position == 1) {
+			node.next = head;
+			head = node;
+		} else {
+			Node previous = head;
+			int count = 1; // position - 1
+
+			while (count < position - 1) {
+				previous = previous.next;
+				count++;
+			}
+
+			Node temp = previous.next;
+			previous.next = node;
+			node.next = temp;
+		}
+
 	}
 
 }
